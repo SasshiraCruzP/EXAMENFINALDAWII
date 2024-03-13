@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>MANTENIMIENTO USUARIOS</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>CODIGO</th>
+                     <th>USARIO</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDOS</th>
+                    <th>EMAIL</th>
+                    <th>CONTRASEÑA</th>
+                    <th>ESTADO</th>
+                    <th>TIPO</th>
+                    <th>FECH. INGRESO</th>
+                    <th>ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users" class="text-center">
+                        
+                        <td>{{user.id}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.password}}</td>
+                        <td>{{user.is_active}}</td>
+                        <td>{{user.kind}}</td>
+                        <td>{{user.createdAt}}</td>                        
+                        <td>
+                            <button type="button" class="btn btn-warning">Editar</button>
+                            <button type="button" class="btn btn-danger">Eliminar</button> 
+                         </td>
+                    </tr>
+                  
+                </tbody>
+              </table>         
+        </div>
+    </div>
+</div>
+       
